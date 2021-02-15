@@ -31,8 +31,10 @@
 
 .grupo{
     padding-top: 7rem;
+    margin-right: 20rem;;
     z-index: -1;
     text-align: center;
+    overflow: scroll;
 }
 
 .centrar{
