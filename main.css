@@ -1,17 +1,19 @@
 .header {
+    position: fixed;
     right: 0;
     left: 0;
     top : 0;
     z-index: 1000;
-
+    grid-row:1/2;
     background-color: white;
     color: black;
   }
 
 
 .body {
+    grid-area:2/1;
+    grid-row: 2/2;
     scroll-behavior: smooth;
-    
   }
 
 .titulo{
@@ -23,9 +25,21 @@
     text-align: end;
   }
 
+  :target:before{
+    content:"";
+    display:block;
+    height:7rem;
+    margin:-7rem 0 0;
+  }
+
 .grupo{
+    padding-top: 7rem;
     z-index: -1;
     text-align: center;
+}
+
+.margen{
+  padding-top:7rem;
 }
 
 .centrar{
@@ -45,6 +59,7 @@
     right: 0;
     bottom: 0;
     background-color: aliceblue;
+    overflow : scroll;
 
   }
 
