@@ -4,7 +4,7 @@ function leerpdf (referencia,ruta){
         if (response.ok){
             if(document.getElementById(referencia).innerHTML == "Abrir Guia Docente"){
                 document.getElementById(referencia).innerHTML =  "Cerrar Guia Docente";
-                var pdf = document.createElement("embed");
+                var pdf = document.createElement("iframe");
                 pdf.setAttribute("src", ruta);
                 console.log(ruta);
                 pdf.setAttribute("type","application/pdf");
@@ -19,8 +19,7 @@ function leerpdf (referencia,ruta){
                 document.getElementById(id).remove();
             }
         }
-    })
-        
+    })    
 
     .catch(e => {
         console.error("Error " + e);
