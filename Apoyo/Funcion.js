@@ -1,10 +1,10 @@
 function leerpdf (referencia,ruta){
-    fetch(ruta)
+    fetch(ruta,{mode: 'no-cors'})
     .then(response => {
-        if (response.ok){
+        if (!response.ok){
             if(document.getElementById(referencia).innerHTML == "Abrir Guia Docente"){
                 document.getElementById(referencia).innerHTML =  "Cerrar Guia Docente";
-                var pdf = document.createElement("iframe");
+                var pdf = document.createElement("embed");
                 pdf.setAttribute("src", ruta);
                 console.log(ruta);
                 pdf.setAttribute("type","application/pdf");
@@ -16,13 +16,12 @@ function leerpdf (referencia,ruta){
             }else{
                 var id = referencia + "pdf";
                 document.getElementById(referencia).innerHTML = "Abrir Guia Docente";
-                document.getElementById(id).remove();
+                document.getElementById(id).remove();   
             }
         }
     })    
-
     .catch(e => {
-        console.error("Error " + e);
+        console.error("Errorrrrrr " + e);
     })
 
     
