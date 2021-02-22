@@ -5,7 +5,7 @@ function leerpdf (referencia,ruta){
         if(document.getElementById(referencia).innerHTML == "Abrir Guia Docente"){
             document.getElementById(referencia).innerHTML =  "Cerrar Guia Docente";
             var pdf = document.createElement("embed");
-            pdf.setAttribute("src", pagina.url);
+            pdf.setAttribute("src", pagina);
             pdf.setAttribute("type","application/pdf");
             pdf.setAttribute("width","90%");
             pdf.setAttribute("height","550rem");
