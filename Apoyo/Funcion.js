@@ -6,7 +6,6 @@ function leerpdf (referencia,ruta){
                 document.getElementById(referencia).innerHTML =  "Cerrar Guia Docente";
                 var pdf = document.createElement("embed");
                 pdf.setAttribute("src", ruta);
-                console.log(ruta);
                 pdf.setAttribute("type","application/pdf");
                 pdf.setAttribute("width","90%");
                 pdf.setAttribute("height","550rem");
